@@ -9,15 +9,26 @@ RUN apk update && \
     build-base \
     cmake
 
+RUN echo "1"
+RUN echo pwd
+RUN echo ls -l
+
 WORKDIR /simplecppcalculator
 
 COPY src/ ./src/
 COPY CMakeLists.txt .
 
+RUN echo "2"
+RUN echo pwd
+RUN echo ls -l
+
 WORKDIR /simplecppcalculator/build
 
-RUN cmake -DCMAKE_BUILD_TYPE=Release .. && \
-    cmake --build . --parallel 8
+RUN echo "3"
+RUN echo pwd
+RUN echo ls -l
+
+RUN cmake -DCMAKE_BUILD_TYPE=Release ../ && cmake --build ./ --parallel 8
 
 ########################################################################################################################
 # simplehttpserver image

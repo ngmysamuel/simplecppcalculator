@@ -13,7 +13,7 @@
 * Had to grant permissions but was looking in the wrong place
 ![Where I was stuck](photo_1.png)
 Actual page to grant the roles was at another page  
-![Where it should have been](photo_2.png)
+![Where it should have been](photo_2.PNG)
 
 ## Helpful Links
 * [Where to get C++ compiler](https://www.mingw-w64.org/downloads/)

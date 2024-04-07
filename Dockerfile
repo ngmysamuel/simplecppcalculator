@@ -14,6 +14,9 @@ WORKDIR /simplecppcalculator
 COPY src/ ./src/
 COPY CMakeLists.txt .
 
+WORKDIR /simplecppcalculator/build
+
+RUN cmake -DCMAKE_BUILD_TYPE=Release ../ && cmake --build ./ --parallel 8
 
 WORKDIR /simplecppcalculator/build
 

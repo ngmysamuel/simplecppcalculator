@@ -51,7 +51,7 @@ RUN pwd
 RUN ls -l
 
 COPY --chown=shs:shs --from=build \
-    ./simplecppcalculator/build/src/simplehttpserver \
+    ./simplecppcalculator/build/src/simplecppcalculator \
     ./app/
 
 ENTRYPOINT [ "./app/simplecppcalculator" ]

@@ -1,4 +1,25 @@
+# Building and Running locally
+* `git clone https://github.com/ngmysamuel/simplecppcalculator.git`
+*  `g++ src/app.cpp -o out -lws2_32`
+* `./out.exe`
 
+# Building and Running using GitHub Actions
+* Simply push!
+    * Step 1: Checkout.
+        * This step checks out the code - similar to what you would do in the local build and run step
+    * Step 2: Google Auth
+        * This authenticates your entire workflow with Google. We will be using their Artifact Repository to store our built image as well as Google Cloud Run to deploy our image.
+        * TODO: make a move to Docker Hub?
+    * Step 3: Docker Auth
+        * Actually authenticates into the Artifact Repository
+    * Step 4: Build and Push Container
+        * Runs `docker build` and `docker push`
+    * Step 5: Deploy to Cloud Run
+        * The deployment phase where the image becomes an instance running on Google's cloud infra.
+    * Step 6: Show Output
+        * Syntactic sugar to provide easy access to the deployed endpoint  
+
+![Workflow Diagram](photo_3.png)
 
 ## Troubles faced
 * Google's documentation on permissioning for GitHub Actions was extremely hard to understand

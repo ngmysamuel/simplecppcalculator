@@ -59,7 +59,7 @@ g++ src/app.cpp -o out -lws2_32
 ![Workflow Diagram](photo_3.png)
 
 ## Issues faced
-* Google's documentation on permissioning for GitHub Actions was extremely hard to understand
+* Google's documentation on permissioning for GitHub Actions was hard to understand
     * [Workload Identity Federation](https://cloud.google.com/iam/docs/workload-identity-federation)
     * Creation of service accounts, Workload identity pools, Workload identity pool providers, OIDC, local JWKs, attribute mappings, CEL expressions, etc
 * Assorted issues 
